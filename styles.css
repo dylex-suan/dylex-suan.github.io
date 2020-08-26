@@ -1,0 +1,153 @@
+/*
+COLOR PALETTE:
+https: //coolors.co/1e152a-3dfaff-92140c-f72585-4361ee
+#13152A - Dark Purple
+#3DFAFF - Aqua
+#92140C - Dark Red
+#F72585 - Flickr Pink
+#4361EE - Ultramarine Blue
+#343434 - Black (for text)
+*/
+
+/* GLOBAL STYLES
+--------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: block;
+    position: relative;
+    color: #343434;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+    line-height: normal;
+}
+
+img {
+   max-width: 400px;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 1;
+}
+
+h2, th {
+    font-size: 30px;
+}
+
+h3 {
+    margin: 0;
+}
+
+p, td {
+    font-size: 20px;
+}
+
+.about-me, .professional-experience, .awards, .contacts {
+    max-width: 75vw;
+    position: inherit;
+    left: 10vw;
+}
+
+/* Home section
+--------------------------------------*/
+
+.about-me .ident {
+    width: 300px;
+}
+
+#home {
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+
+.my_photo {
+    display: inline-flex;
+    border-radius: 50%;
+    max-width: 25%;
+    max-height: 25%;
+    left: 30vw;
+    
+}
+
+/* Professional Experience
+--------------------------------------*/
+
+.professional-experience {
+    margin: 15em 0;
+}
+
+p.description {
+    display: inline-flex;
+    max-width: 50vw;
+}
+
+.content a img {
+    vertical-align: middle;
+}
+
+.OSTA-AECO, .HCDSB, .St.Paul {
+    margin: 15em 0;
+}
+
+.OSTA-AECO .content {
+   vertical-align: right;
+   align-items: center;
+}
+
+.OSTA-AECO .content p.description {
+    margin: 0 1em 0 0;
+}
+
+.OSTA-AECO .content a img {
+    max-width: 30%;
+    margin: 1em 0 0 0;
+}
+
+.HCDSB {
+    text-align: right;
+}
+
+.HCDSB .content p.description {
+    margin: -2em 0 0 0;
+}
+
+.HCDSB .content a img {
+    overflow: hidden;
+    max-width: 50%;
+    margin: 2em 0 0 0;
+}
+
+/* Projects
+--------------------------------------*/
+.projects .intro {
+    position: relative;
+    max-width: 75vw;
+    left: 10vw;
+}
+
+.projects .content.projects {
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: space-evenly;
+    right: 10vw;
+}
+
+.broccoli h2, .broccoli p, .bridge h2, .bridge p {
+    max-width: 30vw;
+    right: 4em;
+}
+
+.bridge {
+    display: inline-block;
+    max-width: 30%;
+}
