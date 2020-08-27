@@ -44,18 +44,19 @@ h2, th {
     font-size: 30px;
 }
 
-h3 {
-    margin: 0;
-}
-
 p, td {
-    font-size: 20px;
+    font-size: 100%;
 }
 
 .about-me, .professional-experience, .awards, .contacts {
     max-width: 75vw;
     position: inherit;
     left: 10vw;
+    margin: 0 0 20em 0;
+}
+
+.nobull {
+    list-style-type: none;
 }
 
 /* Home section
@@ -83,7 +84,7 @@ p, td {
 --------------------------------------*/
 
 .professional-experience {
-    margin: 15em 0;
+    position: inherit;
 }
 
 p.description {
@@ -105,49 +106,106 @@ p.description {
 }
 
 .OSTA-AECO .content p.description {
-    margin: 0 1em 0 0;
+    margin: 0 2em 0 0;
 }
 
 .OSTA-AECO .content a img {
-    max-width: 30%;
-    margin: 1em 0 0 0;
+    max-width: 25%;
+    margin: 2em 0 0 0;
 }
 
 .HCDSB {
     text-align: right;
 }
 
-.HCDSB .content p.description {
-    margin: -2em 0 0 0;
+.HCDSB .content .description {
+    margin: 0 0 2em 0;
 }
 
 .HCDSB .content a img {
-    overflow: hidden;
     max-width: 50%;
     margin: 2em 0 0 0;
 }
 
 /* Projects
 --------------------------------------*/
+.projects {
+    margin: 15em 0;
+}
+
 .projects .intro {
     position: relative;
     max-width: 75vw;
-    left: 10vw;
+    left: 10%;
 }
 
-.projects .content.projects {
+.content.pro {
     display: flex;
-    flex-direction: flex-start;
-    justify-content: space-evenly;
-    right: 10vw;
+    flex-direction: row;
 }
 
-.broccoli h2, .broccoli p, .bridge h2, .bridge p {
-    max-width: 30vw;
-    right: 4em;
+.broccoli, .bridge {
+    text-align: center;
+    flex: 1;
+    max-width: 35%;
+    max-height: 15%;
+    border: 1px solid black;
+    margin: 1em;
+}
+
+.broccoli {
+    margin: 0 0 0 12em;
+}
+
+img.photo {
+    max-height: 190px;
+
 }
 
 .bridge {
-    display: inline-block;
-    max-width: 30%;
+    margin: 0 0 0 2em;
+}
+
+/* Awards
+--------------------------------------*/
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 0 0 1em 0;
+}
+
+th, td {
+    padding: .75em;
+    border-bottom: 1px solid black;
+}
+
+th.year {
+    padding: 0;
+}
+
+/* Contacts
+--------------------------------------*/
+
+.logos ul {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    vertical-align: top;
+}
+
+.logos a {
+    margin: 0 0 0 3em;
+
+}
+
+.logos img {
+    width: 3em;
+}
+
+.Linkedin, .Twitter, .Github {
+    flex-direction: row;
+    justify-items: flex-start;
 }
