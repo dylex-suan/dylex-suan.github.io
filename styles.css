@@ -7,11 +7,13 @@ https: //coolors.co/1e152a-3dfaff-92140c-f72585-4361ee
 #F72585 - Flickr Pink
 #4361EE - Ultramarine Blue
 #343434 - Black (for text)
+
+#0B0014 - Xketic 
+#D44D5C - Paradsie Pink
 */
 
 /* GLOBAL STYLES
 --------------------------------------*/
-
 html {
     box-sizing: border-box;
 }
@@ -48,6 +50,10 @@ p, td {
     font-size: 100%;
 }
 
+a {
+    padding: 5px 0;
+}
+
 .about-me, .professional-experience, .awards, .contacts {
     max-width: 75vw;
     position: inherit;
@@ -59,13 +65,41 @@ p, td {
     list-style-type: none;
 }
 
-/* Home section
+/* Navigation section
 --------------------------------------*/
 
-.about-me .ident {
-    width: 300px;
+ul.menu {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    background-color: #0B0014;
+    border: 1px solid black;
+    overflow: auto;
 }
 
+.menu li a {
+    display: block;
+    color: white;
+    padding: 0 16px 0 0;
+    text-decoration: none;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+    padding: 0;
+}
+
+.menu a:hover {
+    background-color: #4361EE;
+    padding: 0;
+    color: white;
+}
+
+/* Home section
+--------------------------------------*/
 #home {
     padding-bottom: 20px;
     border-bottom: 3px solid black;
@@ -82,7 +116,6 @@ p, td {
 
 /* Professional Experience
 --------------------------------------*/
-
 .professional-experience {
     position: inherit;
 }
@@ -188,7 +221,7 @@ th.year {
 /* Contacts
 --------------------------------------*/
 
-.logos ul {
+.logos.nobull {
     white-space: nowrap;
     display: flex;
     flex-direction: column;
