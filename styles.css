@@ -12,6 +12,7 @@ https: //coolors.co/1e152a-3dfaff-92140c-f72585-4361ee
 #D44D5C - Paradsie Pink
 */
 
+/* A couple of things: the vw is 1% of the viewport width (which is why we need it to make it responsive to different devices).
 /* GLOBAL STYLES
 --------------------------------------*/
 html {
@@ -67,35 +68,69 @@ a {
 
 /* Navigation section
 --------------------------------------*/
+/* NOTE: Preserve the background as #4361EE and the text as white */
+/* How this works....
 
-ul.menu {
-    position: fixed;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    height: 100%;
-    background-color: #0B0014;
-    border: 1px solid black;
-    overflow: auto;
-}
+- .dropdown class uses position:relative, when we need the dropdown content to be placed
+BELOW the dropdown button (position:absolute).
+- Then, .dropdown-content holds actual dropdown menu, which is actually hidden by default, and will
+be displayed on hover. Min-width is set to 160px (which can be changed). I will change
+the width of the dropwdown content to be as wide as the dropdown button by setting the width to 100% and overflow:auto
+so that we can scroll on small screens.
+- box-shadow property will be used to make the dropdown menu look like a card, and the z-index will place the dropdown
+in front of other elements.*/
 
-.menu li a {
-    display: block;
-    color: white;
-    padding: 0 16px 0 0;
-    text-decoration: none;
-}
-
-.menu li:last-child {
-    border-bottom: none;
-    padding: 0;
-}
-
-.menu a:hover {
+.dropbtn {
     background-color: #4361EE;
-    padding: 0;
     color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    float: right;
+    position: sticky;
+    display: inline-block;
+    /* I need the actual dropdown menu to be floated to the right */
+}
+
+/* Dropdown Content (which is hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0B0014;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* Of course, if we float items to the right, we need to be right up against the border on the right. */
+    right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown menu (we have to use JS to add the class to the .dropdown-content container when userclicks on
+dropdown button */
+.show {
+    display: block;
 }
 
 /* Home section
@@ -162,6 +197,8 @@ p.description {
 
 /* Projects
 --------------------------------------*/
+/* Note that you must fix the projects here because this is currently not responsive. */
+
 .projects {
     margin: 15em 0;
 }
