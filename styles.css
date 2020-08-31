@@ -32,9 +32,10 @@ html {
 }
 
 body {
+    background-color: #0B0014;
     position: relative;
     display: block;
-    color: #343434;
+    color: white;
     padding: 0;
     margin: 0;
     border: 0;
@@ -42,6 +43,10 @@ body {
     font-size: 16px;
     /* Line-height is the property referring to the space between each line. 1.6 is the normal. */
     line-height: 1.6;
+}
+
+a {
+    color: white;
 }
 
 img {
@@ -81,7 +86,7 @@ section {
 
 .major {
     padding-bottom: 1em;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid grey;
 }
 
 /* Navigation section
@@ -101,10 +106,6 @@ in front of other elements.*/
 /* SOME OTHER NOTES:
 
 -- overflow: hidden refers to content that will be clipped should it go past its container
-
-
-
-
 */
 
 header {
@@ -113,13 +114,13 @@ header {
 }
 
 .dropbtn {
-    background-color: #4361EE;
+    background-color: #10258371;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    right: 5em;
+    right: 0;
 
 }
 
@@ -203,7 +204,8 @@ dropdown button */
 }
 
 .inner article {
-    border: 2px solid black;
+    border: 2px solid grey;
+    background-color: #13152A;
     padding: 1.75em 1.75em 0.1em;
     border-radius: 10px;
     margin: 1.5em 3em 1.5em 0;
@@ -214,8 +216,6 @@ dropdown button */
 .inner article:nth-child(2n) {
     margin-right: 0;
 }
-
-
 
  /* text-align: center;
     flex: 2;
@@ -230,7 +230,7 @@ table {
 
 th, td {
     padding: .75em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid whitesmoke;
 }
 
 th.year {

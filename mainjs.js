@@ -18,7 +18,22 @@
 //     }
 // }
 
-/* NAVIGATION SITE -- MENU BUTTON */
+// There's an error being triggered: 
+// window.onscroll = function () {
+//     myFunction()
+// };
+
+// var navbar = document.getElementById("dropdown");
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//     if (window.pageYOffset >= sticky) {
+//         navbar.classList.add("sticky")
+//     } else {
+//         navbar.classList.remove("sticky");
+//     }
+// }
+// /* NAVIGATION SITE -- MENU BUTTON */
 
 // Used to connect with the mainpage.html file
 // When user clicks on the button, we can toggle between hiding and showing the dropdown content
