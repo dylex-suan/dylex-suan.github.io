@@ -9,10 +9,18 @@ https: //coolors.co/1e152a-3dfaff-92140c-f72585-4361ee
 #343434 - Black (for text)
 
 #0B0014 - Xketic 
-#D44D5C - Paradsie Pink
+#D44D5C - Paradise Pink
 */
 
-/* A couple of things: the vw is 1% of the viewport width (which is why we need it to make it responsive to different devices).
+/* NOTE:
+- the vw is 1% of the viewport width (which is why we need it to make it responsive to different devices).
+- I am going to change mutliple sections to make it more responsive for the css
+
+NOTE ALSO FOR CERTAIN SELECTOR STYLES:
+> (element1 > element2) refers to all <element2> where the parent is an <element1> element
++ (element1 + element2) refers to all <element2> that are placed after <element1> elements
+~ (element1 ~ element2) refers to selecting all <element2> that are preceded by a <element1> element (meaning 
+
 /* GLOBAL STYLES
 --------------------------------------*/
 html {
@@ -24,46 +32,56 @@ html {
 }
 
 body {
-    display: block;
     position: relative;
+    display: block;
     color: #343434;
     padding: 0;
     margin: 0;
+    border: 0;
     font-family: 'Montserrat',sans-serif;
     font-size: 16px;
-    line-height: normal;
+    /* Line-height is the property referring to the space between each line. 1.6 is the normal. */
+    line-height: 1.6;
 }
 
 img {
-   max-width: 400px;
+    width: 400px;
 }
 
 h1 {
-    font-size: 55px;
-    line-height: 1;
+    font-size: 70px;
 }
 
 h2, th {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 p, td {
     font-size: 100%;
+    line-height: 2;
 }
 
-a {
-    padding: 5px 0;
+article,
+section {
+    display: block;
 }
 
-.about-me, .professional-experience, .awards, .contacts {
-    max-width: 75vw;
-    position: inherit;
-    left: 10vw;
-    margin: 0 0 20em 0;
+/* we add a content-wrapper to maximize the width that we can have on any given section */
+.content-wrapper {
+    max-width: 85%;
+    /* the margin is set to 0 automatically, because if we need to change it later, we'll do it in different areas */
+    margin: 0 auto;
+    padding: 60px 0;
+
 }
 
 .nobull {
     list-style-type: none;
+}
+
+.major {
+    padding-bottom: 1em;
+    border-bottom: 2px solid black;
 }
 
 /* Navigation section
@@ -80,6 +98,20 @@ so that we can scroll on small screens.
 - box-shadow property will be used to make the dropdown menu look like a card, and the z-index will place the dropdown
 in front of other elements.*/
 
+/* SOME OTHER NOTES:
+
+-- overflow: hidden refers to content that will be clipped should it go past its container
+
+
+
+
+*/
+
+header {
+    overflow: hidden;
+    background-color: #0B0014;
+}
+
 .dropbtn {
     background-color: #4361EE;
     color: white;
@@ -87,6 +119,8 @@ in front of other elements.*/
     font-size: 16px;
     border: none;
     cursor: pointer;
+    right: 5em;
+
 }
 
 /* Dropdown button on hover & focus */
@@ -96,8 +130,6 @@ in front of other elements.*/
 
 .dropdown {
     float: right;
-    position: sticky;
-    display: inline-block;
     /* I need the actual dropdown menu to be floated to the right */
 }
 
@@ -133,6 +165,19 @@ dropdown button */
     display: block;
 }
 
+/* Sticky class added when JS is run as it approaches its defined position */
+.sticky {
+    position: fixed;
+    /* The bar has to be right against the top of the bar */
+    top: 0;
+    width: 100%;
+}
+
+/* The extra padding to the content is supposed to help with quick movement that may be distorted -- remember we still have to keep the bar pushed against the top of the page. */
+.sticky+.content {
+    padding-top: 60px;
+}
+
 /* Home section
 --------------------------------------*/
 #home {
@@ -140,110 +185,47 @@ dropdown button */
     border-bottom: 3px solid black;
 }
 
-.my_photo {
-    display: inline-flex;
-    border-radius: 50%;
-    max-width: 25%;
-    max-height: 25%;
-    left: 30vw;
-    
+.my_photo img {
+    display: block;
 }
 
 /* Professional Experience
 --------------------------------------*/
-.professional-experience {
-    position: inherit;
-}
-
-p.description {
-    display: inline-flex;
-    max-width: 50vw;
-}
-
-.content a img {
-    vertical-align: middle;
-}
-
-.OSTA-AECO, .HCDSB, .St.Paul {
-    margin: 15em 0;
-}
-
-.OSTA-AECO .content {
-   vertical-align: right;
-   align-items: center;
-}
-
-.OSTA-AECO .content p.description {
-    margin: 0 2em 0 0;
-}
-
-.OSTA-AECO .content a img {
-    max-width: 25%;
-    margin: 2em 0 0 0;
-}
-
-.HCDSB {
-    text-align: right;
-}
-
-.HCDSB .content .description {
-    margin: 0 0 2em 0;
-}
-
-.HCDSB .content a img {
-    max-width: 50%;
-    margin: 2em 0 0 0;
-}
 
 /* Projects
 --------------------------------------*/
 /* Note that you must fix the projects here because this is currently not responsive. */
 
-.projects {
-    margin: 15em 0;
-}
-
-.projects .intro {
-    position: relative;
-    max-width: 75vw;
-    left: 10%;
-}
-
-.content.pro {
+.inner.project {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-.broccoli, .bridge {
+.inner article {
+    border: 2px solid black;
+    padding: 1.75em 1.75em 0.1em;
+    border-radius: 10px;
+    margin: 1.5em 3em 1.5em 0;
+    width: calc(50% - 1.5em);
     text-align: center;
-    flex: 1;
-    max-width: 35%;
-    max-height: 15%;
+}
+
+.inner article:nth-child(2n) {
+    margin-right: 0;
+}
+
+
+
+ /* text-align: center;
+    flex: 2;
+    max-width: 30em;
     border: 1px solid black;
-    margin: 1em;
-}
-
-.broccoli {
-    margin: 0 0 0 12em;
-}
-
-img.photo {
-    max-height: 190px;
-
-}
-
-.bridge {
-    margin: 0 0 0 2em;
-}
-
+    margin: 1em; */
 /* Awards
 --------------------------------------*/
 table {
     border-collapse: collapse;
-}
-
-th {
-    padding: 0 0 1em 0;
 }
 
 th, td {
@@ -257,13 +239,11 @@ th.year {
 
 /* Contacts
 --------------------------------------*/
-
 .logos.nobull {
     white-space: nowrap;
-    display: flex;
+    display: block;
     flex-direction: column;
     margin: 0;
-    vertical-align: top;
 }
 
 .logos a {
@@ -278,4 +258,14 @@ th.year {
 .Linkedin, .Twitter, .Github {
     flex-direction: row;
     justify-items: flex-start;
+}
+
+/* Responsive media
+--------------------------------------*/
+@media screen and (min-width: 750px) {
+   
+}
+
+@media screen and (max-width: 749px) {
+   
 }

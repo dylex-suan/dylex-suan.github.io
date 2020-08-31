@@ -1,3 +1,23 @@
+// /* FOR SCROLLING */
+// window.onscroll = function () {
+//     myFunctiontoScroll();
+// }
+
+// // Get the nav bar from the HTML file
+// var navbar = document.getElementsByClassName("dropdown");
+
+// // Offset position of the navbar
+// var sticky = navbar.offsetTop;
+
+// // Add the sticky class to navbar when the scroll position is reached! Remove the sticky when the scroll position is passed 
+// function myFunctiontoScroll() {
+//     if (window.pageYOffset >= sticky) {
+//         navbar.classList.add("sticky");
+//     } else {
+//         navbar.classList.remove("sticky");
+//     }
+// }
+
 /* NAVIGATION SITE -- MENU BUTTON */
 
 // Used to connect with the mainpage.html file
@@ -13,7 +33,7 @@ window.onClick = function (event) {
         // Then we get the 'dropdown-content' class
         var dropdowns = document.getElementsByClassName('dropdown-content');
         var i;
-        // Next, e
+        // Next, get all of the elements within the "dropdown-content" name and show them.
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {

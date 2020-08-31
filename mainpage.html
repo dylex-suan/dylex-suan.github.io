@@ -1,3 +1,8 @@
+<!-- NOTES:
+alt in an image refers to a description of the image for those w/ visual impaired capabilities.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -12,226 +17,242 @@
 
 <body>
     <!-- MENU DIRECTORY -->
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#awards">Awards</a>
-            <a href="#contacts">Contacts</a>
+    <header>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#awards">Awards</a>
+                <a href="#contacts">Contacts</a>
+            </div>
         </div>
-    </div>
-
+    </header>
+    
     <!-- HOME SECTION -->
-    <div class="about-me">
-        <img class="my_photo" src="photos/me.JPG">
-        <h1><a id="home"></a>Dylex Suan</h1>
-        <h2><a class="ident">Computer Science Student @ University of Waterloo |
-                Former HCDSB Burlington Student Trustee '19-'20 | CWSF '16 & '17 | Avid Pianist</a></h2>
-    </div>
+    <section class="about-me">
+        <div class="content-wrapper">
+         <img class="my_photo" src="photos/me.JPG" alt width="400" height="500">
+         <h1 class="major"><a id="home"></a>Dylex Suan</h1>
+         <h2><a class="ident">Computer Science Student @ University of Waterloo |
+         Former HCDSB Burlington Student Trustee '19-'20 | CWSF '16 & '17 | Avid Pianist</a></h2>
+        </div>
+    </section>
 
     <!-- PROFESSIONAL EXPERIENCE-->
     <section class="professional-experience">
-        <section class="OSTA-AECO">
-            <h1><a id="experience"></a>Professional Experience</h1>
-            <h2 class="protitle"> Co-Chair of French Relations Working Group @ Ontario Student Trustees Association
-                (OSTA-AECO)</h2>
-            <h3 class="date"><i>August 2019 - August 2020</i></h3>
-            <div class="content">
-                <p class="description"> • Planned the first OSTA-AECO French Language Symposium in Ottawa (cancelled due
-                    to COVID-19 with a budget of over $1500 and a focus on French as a Second Language in Ontario<br>
-                    • Worked with the Minister of Education as a Francophile/Francophone representative to recommend
-                    subsidization of DELF exams by the provincial government<br>
-                    • Acted as one of two de-facto spokespeople to conduct media interviews in French on behalf of the
-                    organization</p>
-                <a href="https://osta-aeco.org">
-                    <img src="photos/OSTA-AECOlogo.png">
-                </a>
-            </div>
-        </section>
+        <div class="content-wrapper">
 
-        <section class="HCDSB">
-            <h2 class="protitle"> Burlington Student Trustee @ Halton Catholic District School Board (HCDSB)</h2>
-            <h3 class="date"><i>August 2019 - August 2020</i></h3>
-            <div class="content">
-                <a href="https://hcdsb.org">
-                    <img src="photos/HCDSBlogo.png">
-                </a>
-                <p class="description"> • Elected by the student body to collectively represent more than 35 000
-                    students across Halton
-                    Region<br>
-                    • Successfully advocated for free menstrual products in all schools across the region, as well as
-                    $110 000 worth
-                    of funding for the installment of menstrual product dispensers by September 2020<br>
-                    • Authored the first student-led transit report invoking recommendations to improve transit in
-                    Burlington,
-                    including the support of free transit to all secondary students and improvements on current bus
-                    routes<br>
-                    • Successfully advocated for the development of a Board-wide strategy to mitigate food waste by 15%
-                    in secondary
-                    school serveries and the possibility of food donations by December 2020</p>
+         <section class="exp-item">
+               <h1 class="major"><a id="experience"></a>Professional Experience</h1>
+               <h2 class="protitle"> Co-Chair of French Relations Working Group @ Ontario Student Trustees Association
+                   (OSTA-AECO)</h2>
+               <h3 class="date"><i>August 2019 - August 2020</i></h3>
+               <div class="content">
+                   <a href="https://osta-aeco.org"><img src="photos/OSTA-AECOlogo.png"></a>
+                   <ul class="description">
+                       <li>Planned the first OSTA-AECO French Language Symposium in Ottawa (cancelled
+                           due to COVID-19 with a budget of over $1500 and a focus on French as a Second Language in
+                           Ontario</li>
+                       <li>Worked with the Minister of Education as a Francophile/Francophone representative to
+                           recommend subsidization of DELF exams by the provincial government</li>
+                       <li>Acted as one of two de-facto spokespeople to conduct media interviews in French on behalf of
+                           the organization</li>
+                </ul>
             </div>
         </section>
+        
+         <section class="exp-item">
+             <h2 class="protitle"> Burlington Student Trustee @ Halton Catholic District School Board (HCDSB)</h2>
+             <h3 class="date"><i>August 2019 - August 2020</i></h3>
+             <div class="content">
+                 <a href="https://hcdsb.org"><img src="photos/HCDSBlogo.png"></a>
+                 <ul class="description">
+                     <li>Elected by the student body to collectively represent more than 35 000 students across Halton Region</li>
+                     <li>Successfully advocated for free menstrual products in all schools across the region, as well as
+                         $110 000 worth of funding for the installment of menstrual product dispensers by September 2020</li>
+                     <li>Authored the first student-led transit report invoking recommendations to improve transit in
+                         Burlington, including the support of free transit to all secondary students and improvements on current bus routes</li>
+                     <li>Successfully advocated for the development of a Board-wide strategy to mitigate food waste by 15%
+                        in secondary school serveries and the possibility of food donations by December 2020</li>
+                 </ul>
+         </section>
+        </div>
     </section>
 
     <!-- PROJECTS SECTION -->
     <section class="projects">
-        <section class="intro">
-            <h1><a id="projects">Projects</a></h1>
-            <p>Over the past few years, I've been heavily involved with projects extending beyond Computer Science --
-                from structural engineering to botany! Below are some of my projects, several of which have gone on
-                to regional and national science fairs such as the Canada Wide Science Fair.</p>
-        </section>
-        <div class="content pro">
-            <div class="broccoli">
-                <h2>Ameliorating Salinity Tolerance in Broccoli Plants by Acclimation</h2>
-                <img class="photo" src="photos/BASEFbroccoliphoto.jpg">
-                <p>I investigated phytoremediation properties found in normal broccoli plants that could potentially be
-                    used as a potential application for desalination.
-                    This project was presented at the Bay Area Science and Engineering Fair (BASEF), which was
-                    subsequently awarded a gold medal. At the Canada Wide Science Fair (CWSF) in Regina, Saskatchewan,
-                    this was awarded a bronze medal in the Environment Category.
-                </p>
-                <a
-                    href="https://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=5275&year=&province=&keyword=&name=Suan&categoryid=&divisionid=&challengeid=&regionid="><button>Learn
-                        More</button></a>
-            </div>
-            <div class="bridge">
-                <h2>An Investigation on Aeroelastic Flutter Reduction of Suspension Bridges</h2>
-                <img class="CWSFBridge" src="photos/CWSFBridge.jpeg">
-                <p>I investigated different bridgedesigns that would help to mitigate aeroelastic flutter of suspension
-                    bridges. This project was presented at the Bay Area Science and Engineering Fair (BASEF)
-                    which subsequently earned a gold medal. I went to the Canada Wide Science Fair in Montreal to
-                    compete against over 500 students across Canada.
-                </p>
-                <a
-                    href="https://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=4764&year=&province=&keyword=&name=Suan&categoryid=&divisionid=&challengeid=&regionid="><button>Learn
-                        More</button></a>
-            </div>
+        <div class="content-wrapper">
+
+            <section class="intro">
+                <h1 class="major"><a id="projects">Projects</a></h1>
+                <p>Over the past few years, I've been heavily involved with projects extending beyond Computer Science
+                    -- from structural engineering to botany! Below are some of my projects, several of which have gone on
+                    to regional and national science fairs such as the Canada Wide Science Fair.</p>
+            </section>
+
+            <div class="inner project">
+                <article>
+                    <h2>Ameliorating Salinity Tolerance in Broccoli Plants by Acclimation</h2>
+                    <img class="photo" src="photos/BASEFbroccoliphoto.jpg">
+                    <p>I investigated phytoremediation properties found in normal broccoli plants that could potentially be
+                        used as a potential application for desalination.
+                        This project was presented at the Bay Area Science and Engineering Fair (BASEF), which was
+                        subsequently awarded a gold medal. At the Canada Wide Science Fair (CWSF) in Regina, Saskatchewan,
+                        this was awarded a bronze medal in the Environment Category.
+                    </p>
+                    <a href="https://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=5275&year=&province=&keyword=&name=Suan&categoryid=&divisionid=&challengeid=&regionid="><button>Learn
+                            More</button></a>
+                </article>
+
+                <article>
+                    <h2>An Investigation on Aeroelastic Flutter Reduction of Suspension Bridges</h2>
+                    <img class="photo" src="photos/CWSFBridge.jpeg">
+                    <p>I investigated different bridge designs that would help to mitigate aeroelastic flutter of suspension
+                        bridges. This project was presented at the Bay Area Science and Engineering Fair (BASEF)
+                        which subsequently earned a gold medal. I went to the Canada Wide Science Fair in Montreal to
+                        compete against over 500 students across Canada.
+                    </p>
+                    <a
+                        href="https://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=4764&year=&province=&keyword=&name=Suan&categoryid=&divisionid=&challengeid=&regionid="><button>Learn
+                            More</button></a>
+                </article>
+
+             </section>
         </div>
     </section>
 
     <!-- AWARDS SECTION -->
     <section class="awards">
-        <h1>
-            <a id="awards">Awards</a>
-        </h1>
-        <table>
-            <tr style="border-bottom: 2em">
-                <th class="name">Name</th>
-                <th class="description">Description</th>
-                <th class="year">Year</th>
-            </tr>
-            <tr>
-                <td>Lieutenant Governor Community Volunteer Award</td>
-                <td>Awarded for exemplary community contributions and outstanding achievement through volunteer
-                    activities,
-                    and exceeding the requirement of community service
-                    to get an OSSD, earning 601 volunteer hours throughout high school.</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Ontario Scholar</td>
-                <td>Earned an average of 97% in my Grade 12 graduating year, which surpasses the minimum 80% average
-                    required to receive this award.</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Principal's Award</td>
-                <td>Awarded to the student who has shown both academic excellence and student eladership, usually a
-                    student
-                    who has worked with the principal.</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Subject Achievement Awards (Grade 12)</td>
-                <td>Awarded four awards for having earned the highest mark in the following courses in Grade 12:
-                    Advanced Functions (MHF4U), Calculus and Vetors (MCV4U), Introduction to Computer Science (ICS4U),
-                    and
-                    Core French - Grade 12 (FSF4U).</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>HCDSB Student Award of Excellence</td>
-                <td>Nominated from over 1000 students, I am the sole recipient of this award from Corpus Christi
-                    Catholic
-                    Secondary School, which recognizes excellence in students who have demonstrated
-                    dedication and actions in faith in their community.</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Honour Roll (Grade 11)</td>
-                <td>Maintained an overall average of 97.6% throughout my Grade 11 year, and obtained the highest marks
-                    in
-                    the following courses: Introduction to Computer Science (ICS3U), Core French - Grade 11 (FSF3U)</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Canadian Computing Competition Junior Level</td>
-                <td>Received a Certificate of Distinction after scoring in the top 25% of all competitors.</td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Honour Roll (Grade 10)</td>
-                <td>Scored an overall average of 97% throughout the Grade 10 year and obtained the highest marks in the
-                    following courses:
-                    Introduction to Computer Sciences (ICS2O1), Core French - Grade 10 (FSF2D1), Careers - Grade 10
-                    (GLC2O5)
-                </td>
-                <td>June 2020</td>
-            </tr>
-            <tr>
-                <td>Concours D'art Oratoire Provincial Gold Medal</td>
-                <td>Created an impromptu speech in French in less than 15 minutes and presented in front of Francophone
-                    judges.
-                    Awarded first place at the provincial level against multiple competitors across the province.
-                </td>
-                <td>May 2018</td>
-            </tr>
-            <tr>
-                <td>Pascal School Champion</td>
-                <td>Attained the highest mark among Grade 9 competitors at Corpus Christi.</td>
-                <td>Oct 2017</td>
-            </tr>
-            <tr>
-                <td>CWSF Bronze Medal</td>
-                <td>Conducted a study on taking advantage of phytoremediation properties found in normal broccoli plants
-                    as
-                    a potential application for desalination. Awarded third place at the national science fair out of
-                    500
-                    students across Canada, and was awarded a $1000 entrance scholarship to Western University.</td>
-                <td>May 2017</td>
-            </tr>
-            <tr>
-                <td>Concours D'art Oratoire Provincial Silver Medal</td>
-                <td>Presented a speech entitled, "L'intellecualité des examens de musique" (literally translated, The
-                    Intellectuality of Music Exams), and competed against 25 students across the province.</td>
-                <td>May 2017</td>
-            </tr>
-        </table>
+        <div class="content-wrapper">
+            <h1 class="major"><a id="awards">Awards</a></h1>
+            <table>
+                <tr style="border-bottom: 2em">
+                    <th class="name">Name</th>
+                    <th class="description">Description</th>
+                    <th class="year">Year</th>
+                </tr>
+                <tr>
+                    <td>Lieutenant Governor Community Volunteer Award</td>
+                    <td>Awarded for exemplary community contributions and outstanding achievement through volunteer
+                        activities,
+                        and exceeding the requirement of community service
+                        to get an OSSD, earning 601 volunteer hours throughout high school.</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Ontario Scholar</td>
+                    <td>Earned an average of 97% in my Grade 12 graduating year, which surpasses the minimum 80% average
+                        required to receive this award.</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Principal's Award</td>
+                    <td>Awarded to the student who has shown both academic excellence and student eladership, usually a
+                        student
+                        who has worked with the principal.</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Subject Achievement Awards (Grade 12)</td>
+                    <td>Awarded four awards for having earned the highest mark in the following courses in Grade 12:
+                        Advanced Functions (MHF4U), Calculus and Vetors (MCV4U), Introduction to Computer Science
+                        (ICS4U),
+                        and
+                        Core French - Grade 12 (FSF4U).</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>HCDSB Student Award of Excellence</td>
+                    <td>Nominated from over 1000 students, I am the sole recipient of this award from Corpus Christi
+                        Catholic
+                        Secondary School, which recognizes excellence in students who have demonstrated
+                        dedication and actions in faith in their community.</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Honour Roll (Grade 11)</td>
+                    <td>Maintained an overall average of 97.6% throughout my Grade 11 year, and obtained the highest
+                        marks
+                        in
+                        the following courses: Introduction to Computer Science (ICS3U), Core French - Grade 11 (FSF3U)
+                    </td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Canadian Computing Competition Junior Level</td>
+                    <td>Received a Certificate of Distinction after scoring in the top 25% of all competitors.</td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Honour Roll (Grade 10)</td>
+                    <td>Scored an overall average of 97% throughout the Grade 10 year and obtained the highest marks in
+                        the
+                        following courses:
+                        Introduction to Computer Sciences (ICS2O1), Core French - Grade 10 (FSF2D1), Careers - Grade 10
+                        (GLC2O5)
+                    </td>
+                    <td>June 2020</td>
+                </tr>
+                <tr>
+                    <td>Concours D'art Oratoire Provincial Gold Medal</td>
+                    <td>Created an impromptu speech in French in less than 15 minutes and presented in front of
+                        Francophone
+                        judges.
+                        Awarded first place at the provincial level against multiple competitors across the province.
+                    </td>
+                    <td>May 2018</td>
+                </tr>
+                <tr>
+                    <td>Pascal School Champion</td>
+                    <td>Attained the highest mark among Grade 9 competitors at Corpus Christi.</td>
+                    <td>Oct 2017</td>
+                </tr>
+                <tr>
+                    <td>CWSF Bronze Medal</td>
+                    <td>Conducted a study on taking advantage of phytoremediation properties found in normal broccoli
+                        plants
+                        as
+                        a potential application for desalination. Awarded third place at the national science fair out
+                        of
+                        500
+                        students across Canada, and was awarded a $1000 entrance scholarship to Western University.</td>
+                    <td>May 2017</td>
+                </tr>
+                <tr>
+                    <td>Concours D'art Oratoire Provincial Silver Medal</td>
+                    <td>Presented a speech entitled, "L'intellecualité des examens de musique" (literally translated,
+                        The
+                        Intellectuality of Music Exams), and competed against 25 students across the province.</td>
+                    <td>May 2017</td>
+                </tr>
+            </table>
+        </div>
     </section>
 
-    <div class="contacts">
-        <h1 id="contacts">Contacts</h1>
-        <ul class="logos nobull">
-            <li class="Linkedin">
-                <img src="photos/Linkedinlogo.png">
-                <a href="https://www.linkedin.com/in/dylex-suan">https://linkedin.com/in/dylex-suan</a>
-            </li>
-            <li class="Twitter">
-                <img src="photos/Twitterlogo.png">
-                <a href="https://twitter.com/DylexSuan">https://twitter.com/DylexSuan</a>
-            </li>
-            <li class="GitHub">
-                <img src="photos/GitHublogo.png">
-                <a href="https://github.com/dylex-suan">https://github.com/dylex-suan</a>
-            </li>
-            <!-- <li class="mail">
+    <section class="contacts">
+        <div class="content-wrapper">
+            <h1 class="major" id="contacts">Contacts</h1>
+            <ul class="logos nobull">
+                <li class="Linkedin">
+                    <img src="photos/Linkedinlogo.png">
+                    <a href="https://www.linkedin.com/in/dylex-suan">https://linkedin.com/in/dylex-suan</a>
+                </li>
+                <li class="Twitter">
+                    <img src="photos/Twitterlogo.png">
+                    <a href="https://twitter.com/DylexSuan">https://twitter.com/DylexSuan</a>
+                </li>
+                <li class="GitHub">
+                    <img src="photos/GitHublogo.png">
+                    <a href="https://github.com/dylex-suan">https://github.com/dylex-suan</a>
+                </li>
+                <!-- <li class="mail">
                 <p>Email:</p><a href="mailto: kdsuan@uwaterloo.ca">kdsuan@uwaterloo.ca</a>
             </li> -->
-        </ul>
-    </div>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
