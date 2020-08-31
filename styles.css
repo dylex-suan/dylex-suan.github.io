@@ -66,11 +66,6 @@ p, td {
     line-height: 2;
 }
 
-article,
-section {
-    display: block;
-}
-
 /* we add a content-wrapper to maximize the width that we can have on any given section */
 .content-wrapper {
     max-width: 85%;
@@ -111,6 +106,7 @@ in front of other elements.*/
 header {
     overflow: hidden;
     background-color: #0B0014;
+    text-align: right;
 }
 
 .dropbtn {
@@ -120,13 +116,16 @@ header {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    right: 0;
-
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    width: 5em;
+    
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+    background-color:#24274e;
 }
 
 .dropdown {
@@ -137,14 +136,14 @@ header {
 /* Dropdown Content (which is hidden by default) */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #0B0014;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    /* Of course, if we float items to the right, we need to be right up against the border on the right. */
-    right: 0;
+    /* I'm not comfortable with having the menu and dropdown content pushed against the top, so I will allow for a little bit of space */
+    top: 6em;
+    right: 3em;
 }
 
 /* Links inside the dropdown */
@@ -166,18 +165,6 @@ dropdown button */
     display: block;
 }
 
-/* Sticky class added when JS is run as it approaches its defined position */
-.sticky {
-    position: fixed;
-    /* The bar has to be right against the top of the bar */
-    top: 0;
-    width: 100%;
-}
-
-/* The extra padding to the content is supposed to help with quick movement that may be distorted -- remember we still have to keep the bar pushed against the top of the page. */
-.sticky+.content {
-    padding-top: 60px;
-}
 
 /* Home section
 --------------------------------------*/
@@ -210,7 +197,15 @@ dropdown button */
     border-radius: 10px;
     margin: 1.5em 3em 1.5em 0;
     width: calc(50% - 1.5em);
-    text-align: center;
+    text-align: left;
+}
+
+.inner img {
+    width: 100%;
+}
+
+.inner article button {
+    margin: 0 0 2em;
 }
 
 .inner article:nth-child(2n) {
