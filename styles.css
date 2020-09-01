@@ -107,10 +107,12 @@ header {
     overflow: hidden;
     background-color: #0B0014;
     text-align: right;
+    z-index: 1000;
 }
 
 .dropbtn {
     background-color: #10258371;
+    border-color: 10px solid grey;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -124,8 +126,12 @@ header {
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover {
     background-color:#24274e;
+}
+
+.dropbtn:focus {
+    background-color: #10258371;
 }
 
 .dropdown {
@@ -137,10 +143,10 @@ header {
 .dropdown-content {
     display: none;
     position: fixed;
-    background-color: #0B0014;
+    background-color: #1d0531;
     min-width: 160px;
     overflow: auto;
-    z-index: 1;
+    z-index: 1000;
     /* I'm not comfortable with having the menu and dropdown content pushed against the top, so I will allow for a little bit of space */
     top: 6em;
     right: 3em;
@@ -173,8 +179,12 @@ dropdown button */
     border-bottom: 3px solid black;
 }
 
-.my_photo img {
-    display: block;
+/* creating an animation that has the text moving in from the right to the left as the user opens up the page. */
+.about-me h1,
+.about-me h2 {
+    transition: transform .5s ease-in-out;
+    transition-delay: 0.65s;
+    transform: translateX(0px);
 }
 
 /* Professional Experience
