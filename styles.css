@@ -182,9 +182,11 @@ dropdown button */
 /* creating an animation that has the text moving in from the right to the left as the user opens up the page. */
 .about-me h1,
 .about-me h2 {
-    transition: transform .5s ease-in-out;
-    transition-delay: 0.65s;
-    transform: translateX(0px);
+    transition: left 2s;
+}
+
+.about-me h1:hover, .about-me h2:hover {
+    left: 0;
 }
 
 /* Professional Experience
