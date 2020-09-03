@@ -84,6 +84,43 @@ p, td {
     border-bottom: 2px solid grey;
 }
 
+/* creating an animation that has the text moving in from the right to the left as the user opens up the page. */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.scene_element {
+    animation-duration: 1.5s;
+    transition-timing-function: ease-in;
+    animation-delay: 0.65s;
+}
+
+.scene_element--fadein {
+    animation-name: fadeIn;
+}
+
+.scene_element--fadeinright {
+    animation-name: fadeInRight;
+}
+
 /* Navigation section
 --------------------------------------*/
 /* NOTE: Preserve the background as #4361EE and the text as white */
@@ -179,42 +216,6 @@ dropdown button */
     padding-bottom: 20px;
     border-bottom: 3px solid black;
 }
-
-
-/* creating an animation that has the text moving in from the right to the left as the user opens up the page. */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-    .scene_element {
-        animation-duration: 1.5s;
-        transition-timing-function: ease-in;
-        animation-delay: 0.65s;
-    }
-
-    .scene_element--fadein {
-        animation-name: fadeIn;
-    }
-
-    .scene_element--fadeinright {
-        animation-name: fadeInRight;
-    }
 
 /* Professional Experience
 --------------------------------------*/
