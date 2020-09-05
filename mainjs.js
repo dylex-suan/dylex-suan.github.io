@@ -22,3 +22,27 @@ window.onClick = function (event) {
         }
     }
 }
+
+// Scrolling behaviour for JQuery
+// $(document).ready(function() {
+//     // Add smooth scrolling to all the links
+//     $("a").on('click', function(event) {
+//         //Make sure this.hash has a value before overriding default behaviour
+//         if (this.hash !== ""){
+//             // Prevent default anchor click behaviour
+//             event.preventDefault();
+
+//             // Store hash
+//             var hash = this.hash;
+
+//             // animate() method to add smooth page scroll
+//             // Number (800) specifies # of milliseconds it takes to scroll to the specified area
+//             $('html, body').animate({
+//                 scrollTop: $(hash).offset().top
+//             }, 800, function() {
+//                 // Add hash(#) to URL when done scrolling (default click behavior)
+//                 window.location.hash = hash;
+//             });
+//         }
+//     });
+// });
